@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>EPG Tech</title>
+        <meta charset="UTF-8">
+        <meta name="geo.region" content="AO">
+        <meta name="geo.placename" content="Luanda">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="epg tech, noticias de tecnologia, loja de tecnologia, programaçao, redes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="icon" type="image/x-icon" href="./assets/EPG.png">
+        <!-- Import. dos estilos -->
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/> <!--geral styles-->
+        <link rel="stylesheet" type="text/css" href="./css/styles-index.css"/> <!--homepage styles-->
+    </head>
+<body>
+    <header>
+        <div class="social-bar center-v">
+            <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="logo center">
+            <a href="#">EPG Tech</a>
+            <br>Tecnologia nos seus limites<br>
+        </div>
+
+        <div class="rapid-links">
+            <a id="contact">CONTACTO</a>
+            <span>*</span>
+            <a href="./epg/about.html">SOBRE</i></a>
+            <span>*</span>
+            <a href="./epg/support.html">AJUDA</a>
+        </div>
+
+        <div id="menu-btn" onclick="openMenu()">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </header>
+
+    <nav class="shadow" id="navbar" >
+        <ul>
+            <li><a class="active">HOME</a></li>
+            <li><a href="./epg/shop/index.html">LOJA</a></li>
+            <li><a href="./epg/news/index.html">NOTÍCIAS</a></li>
+            <li><a href="./epg/blog/index.html">BLOG</a></li>
+
+            <li class="search-bar">
+                <input type="text" placeholder="Pesquisar..." required>
+                <button type="submit" value="" class="btn-primar"><i class="fa fa-search"></i></button>
+            </li>
+        </ul>
+    </nav>
+
+    <nav  class="shadow" id="sidebar">
+        <div id="close-btn" onclick="closeMenu()"><i class="fa fa-close"></i></div>
+       
+        <ul>
+            <li><a class="active">HOME</a></li>
+            <li><a href="./epg/shop/index.html">LOJA</a></li>
+            <li><a href="./epg/news/index.html">NOTÍCIAS</a></li>
+            <li><a href="./epg/blog/index.html">BLOG</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Pesquisar..." required>
+                <button type="submit" value=""><i class="fa fa-search"></i></button>
+            </li>
+
+            <li class="social-bar">
+                <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <main id="main">
+        <section id="home-slide">
+            <div class="carousel card">
+                <div class="slide fade">
+                    <img src="assets/img/news/Black-Friday-2019-Deals.jpg" >
+                    <a href="epg/shop/index.html">
+                        <p class="text">BlackFriday com descontos de até 50% é na EPG Shop</p>
+                    </a>
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/img/news/tech.jpg">
+                    <a href="epg/blog/index.html">
+                        <p class="text">Receba dicas semanais de tecnologia do nosso blog!</p>
+                    </a>
+                </div>
+
+                <div class="slide fade">
+                    <img src="assets/img/news/cam.jpg">
+                    <a href="epg/news/index.html">
+                        <p class="text">Fique por dentro dos principais acontecimentos do mundo das TIC's</p>
+                    </a>  
+                </div>
+            </div>
+            <!-- os indicadores -->
+            <div id="indicators" class="center-h">
+                <span class="indicator" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+
+        <section id="welcome" style="height: 150px; ">
+            <div class="panel" style="height: 144px;">
+                <div class="panel-transparent center-v">
+                        <h3 >BEM - VINDO AO EPG TECH</h3>
+                        <p id="welcomeMSG" style="text-align: center; font-size: 14pt"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop-section">
+            <div class="title-bar shadow">
+                <div class="title">NOVIDADES <i class="fa fa-shopping-cart"></i></div>
+                    <a href="epg/shop/index.html" class="" style="height: 50%;">
+                        Ir para loja  <i class="fa fa-arrow-right"></i>
+                    </a>
+            </div>
+
+            <div class="shop-container">
+                <a href="epg/shop/shop-product.html">
+                    <div class="card">
+                        <span class="badge">NEW</span>
+                        <img src="assets/img/products/note10.jfif" >
+                        <div class="description">
+                            <p class="title">Samsung Note 10 Plus</p>
+                            <p class="category">Smartphones e Tablets</p>
+                            <span class="price-old">450.000Kz</span>
+                            <span class="price">400.000Kz</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="epg/shop/shop-product.html">
+                    <div class="card">
+                        <span class="badge">NEW</span>
+                        <img src="assets/img/products/s11.jfif" >
+                        <div class="description">
+                            <p class="title">Huawei P40</p>
+                            <p class="category">Smartphones e Tablets</p>
+                            <span class="price-old">555.000Kz</span>
+                            <span class="price">499.999Kz</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="epg/shop/shop-product.html">
+                    <div class="card">
+                        <span class="badge">NEW</span>
+                        <img src="assets/img/products/pc.jfif" >
+                        <div class="description">
+                            <p class="title">Notebook Lenovo L919</p>
+                            <p class="category">Computadores</p>
+                            <span class="price-old">305.000Kz</span>
+                            <span class="price">250.000Kz</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="epg/shop/shop-product.html">
+                    <div class="card">
+                        <span class="badge">NEW</span>
+                        <img src="assets/img/products/smart.jfif" >
+                        <div class="description">
+                            <p class="title">SmartWatch EPG - 2020</p>
+                            <p class="category">Dispositivos e Acessórios</p>
+                            <span class="price-old">130.000Kz</span>
+                            <span class="price">115.000Kz</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="news-section">
+            <h1>ÚLTIMAS NOTÍCIAS</h1>
+            <a href="epg/news/index.html" class="see-more">VER MAIS <i class="fa fa-arrow-right"></i></a>
+            <hr>
+            <div class="news-container">
+                <a href="epg/news/news-article.html">
+                    <div class="card center-news">
+                        <div class="img"></div>
+                        <div class="text-block">
+                            <p class="category">CONECTAPAY - PAGA JÁ</p>
+                            <p class="title">Conheça ConectaPay uma carteira digital que promete te livrar de sufocos...</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="side">
+                    <a class="article" href="epg/news/news-article.html">
+                        <img src="assets/img/news/SWLuanda.jpg">
+                        <div class="content">
+                            <p class="category">STARTUP WEEKEND LUANDA - EDIÇÃO 2</p>
+                            <p class="title">Decorrerá no ISPTEC a 2ª edição do Startup Weekend Luanda de 22 a 24...</p>
+                            <span class="source">Por Redação EPG Tech</span>
+                        </div>
+                    </a>
+
+                    <a class="article" href="epg/news/news-article.html">
+                        <img src="assets/img/news/bai.jpg">
+                        <div class="content">
+                            <p class="category">BAI DIRECTO</p>
+                            <p class="title">BAI Directo conta com novo serviço que vai permitir pedir e receber dinheiro na hora...</p>
+                            <span class="source">Via MenosFios.com</span>
+                        </div>
+                    </a>
+
+                    <a class="article" href="epg/news/news-article.html">
+                        <img src="assets/img/news/ShopSemLim-1-324x235.png">
+                        <div class="content">
+                            <p class="category">SHOPSEMLIM</p>
+                            <p class="title">Descubra a nova forma de ir aos mercados em Angola sem sair de casa...</p>
+                            <span class="source">Por Redação EPG Tech</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="blog-section">
+            <h1>DESTAQUES DO BLOG</h1>
+            <a href="epg/blog/index.html" class="see-more">MAIS ARTIGOS <i class="fa fa-arrow-right"></i></a>
+            <hr>
+            <div class="blog-container">
+
+                <a href="epg/blog/blog-article.html">
+                    <div class="card card-blog">
+                        <img src="assets/img/blog/cibercrime-grande-324x160.jpg">
+                        <div class="title">O que é ataque BEC?</div>
+                        <div class="description">
+                            <p>
+                                A última indústria com o valor triliões de dólares
+                                foi criada com base num código de uns e zeros.
+                                A próxima basear-se-á no nosso próprio código genético.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <img src="assets/img/p2.jpg" class="avatar center-v">
+                            <span class="author ">Edson Gregory</span>
+                            <span class="post-date">21-03-2019</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="epg/blog/blog-article.html">
+                    <div class="card card-blog">
+                        <img src="assets/img/img9.jpg">
+                        <div class="title">As indústrias do futuro</div>
+                        <div class="description">
+                            <p>
+                                A última indústria com o valor triliões de dólares
+                                foi criada com base num código de uns e zeros.
+                                A próxima basear-se-á no nosso próprio código genético.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <img src="assets/img/p3.jpg" class="avatar center-v">
+                            <span class="author ">Anna Maria</span>
+                            <span class="post-date">21-03-2019</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="epg/blog/blog-article.html">
+                    <div class="card card-blog">
+                        <img src="assets/img/blog/microssatélites-324x160.jpg">
+                        <div class="title">Como funcionam os micro-satélites?</div>
+                        <div class="description">
+                            <p>
+                                A última indústria com o valor triliões de dólares
+                                foi criada com base num código de uns e zeros.
+                                A próxima basear-se-á no nosso próprio código genético.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <img src="assets/img/p2.jpg" class="avatar center-v">
+                            <span class="author ">Edson Gregory</span>
+                            <span class="post-date">21-03-2019</span>
+                        </div>
+                    </div>
+                </a>
+
+                
+
+            </div>
+
+        </div>
+        </section>
+
+        
+        <section id="newsletter">
+            <div class="panel">
+                <div class="panel-transparent center-v">
+                    <h3>RECEBA NOVIDADES DE TECNOLOGIA DA EPG TECH</h3>
+                    <div class="center">
+                        <p>Seja o primeiro a saber sobre o que acontece no mundo da TI.
+                            Receba actualizações semanais de produtos e conteúdos do portal
+                            directamente na sua caixa de correio! Subscreva a nossa NEWSLETTER!</p>
+                        <form action="" method="get">
+                            <input type="email" placeholder="Seu email..." required style="padding: 4px;border: none; width: 300px; border-radius: 5px;">
+                            <button type="submit" class="btn-primary" value="">Subscrever</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact-section">
+            <h1>ENTRE EM CONTACTO</h1>
+            <hr>
+            <div  class="contact-container">
+                <div style="position: relative;">
+                    <div class="social-bar center-h">
+                        <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                    <br>
+                    <br>
+                    <i class="fa fa-phone" aria-hidden="true"> </i> +244 222 421 254
+                    <br><br>
+                    <i class="fa fa-envelope" aria-hidden="true"> </i> geral@epg-tech.com
+                    <br><br>
+                    <i class="fa fa-map-marker" aria-hidden="true"> </i> Edif. 3 - Q E4 - Kilamba - Luanda - Angola
+                    <br><br>
+                    <img src="assets/img/map.jpg" style=" height: 200px; width: 100%; box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);" >
+                </div>
+
+                <div class="card" id="contact-form">
+                    <p> Deseja entrar em contacto conosco?</p>
+                    <form action="epg/chat.html" method="GET">
+                        <p>NOME</p>
+                        <input type="text" id="name" name="name" placeholder="Seu nome..." required width="100%">
+                        <p>EMAIL</p>
+                        <input type="email" id="email" name="email" placeholder="Seu email..." required><br>
+                        <p>MENSAGEM</p>
+                        <textarea id="subject" name="subject" placeholder="Sua mensagem..." style="height:60px" required></textarea>
+                        <button class="btn-primary" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botão ir para o topo -->
+        <button class="goUp card" id="goUp-btn"><i class="fa fa-arrow-up"></i></button>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="rapid-links center-h">
+            <a id="contact">CONTACTO</a>
+            <a href="epg/about.html">SOBRE NÓS</i></a>
+            <a href="epg/support.html">SUPORTE</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="social-bar">
+            <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="copyright center-h">
+            <span><i class="fa fa-copyright"></i> 2019 - EPG Tech</span> 
+            <span>Todos os Direitos Reservados</span> 
+            <span>Design by Edson Paulo</span>
+        </div>
+    </footer>
+    
+    <!-- Import. dos scripts -->
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

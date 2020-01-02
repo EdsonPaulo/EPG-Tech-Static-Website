@@ -1,0 +1,94 @@
+/* carousel container */
+.carousel { max-width: 100%; position: relative; height: 300px;  }
+
+.carousel #indicators { 
+  position: absolute;
+  bottom: 20px; 
+}
+.indicator {
+  cursor: pointer;
+  background-color: rgb(192, 191, 191);
+  width: 20px;
+  height: 3px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* oculta as imagens por padrao*/
+.slide { display: none; position: absolute; width:100%; position: relative;}
+.slide img { height: 300px; width:100%; }
+.slide .text {
+  position: absolute;
+  width: 300px;
+  padding: 16px;
+  bottom: 20px;
+  right: 40px;
+  border-radius: 20px;
+  font-size: 14pt;
+  color: gainsboro;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: rgba(40, 0, 0, 0.8);
+}
+.slide .text::after{ content: ''; height: 1px; width: 0; display: block; background: var(--accent); transition: .3s;}
+.slide .text:hover::after {  width: 100%; }
+
+.slide a { 
+  color: red;
+  position: absolute;
+  padding: 16px;
+  bottom: 0;
+  right: 40px;
+  border-radius: 20px;
+  font-size: 12pt;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -20px;
+  padding: 10px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 14pt;
+  transition: 0.4s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: whitesmoke;
+  opacity: 0.6;
+  background-color: var(--accent);
+}
+
+.active, .indicator:hover { background-color: var(--accent); }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
+@keyframes fade {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}

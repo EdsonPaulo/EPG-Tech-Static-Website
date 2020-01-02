@@ -1,0 +1,202 @@
+#blog-section, #news-section, #shop-section,
+#contact-section, #about-section {
+    padding: 24px 42px;
+    margin: 24px 0;
+    text-align: left;
+}
+
+#newsletter {
+
+    padding: 14px 2px;
+    height: 270px;
+}
+
+.more-btn {
+    width: 50%;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 9pt;
+    text-align: center;
+    letter-spacing: 2px;
+    background: var(--grandient);
+    color: var(--light);
+}
+.more-btn:hover{ background: var(--primary-dark); }
+
+.news-container, .shop-container, .contact-container, .side {
+    display: grid;
+    justify-content: center;
+    gap: 2%;
+}
+
+.news-container, .blog-container, 
+.shop-container, .contact-container {
+    padding: 0 64px 12px 64px;
+}
+
+
+/*============ NOTICIAS =====================*/
+.news-container { grid-template-columns: 50% 50%; }
+.news-container .category {color: var(--accent);}
+.news-container .center-news {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.news-container a .card:hover  { transform: scale(1.0); }
+.news-container .center-news .img {  
+    width: 100%; height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("../assets/img/news/conecta.jpg"); }
+.news-container .center-news .text-block {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    width: 80%;
+    color: var(--light);
+    border-radius: 0 15px 15px 0;
+    background: rgba(20, 0, 0, 0.5); 
+    padding: 0 15px;
+}
+.news-container .center-news .text-block .category { letter-spacing: 1px; font-size: 9pt; color: var(--light);}
+.news-container .center-news .text-block .category::after{ content: ''; height: 3px; width: 15%; display: block; background: var(--accent);}
+.news-container .center-news .text-block .title { font-size: 12pt; letter-spacing: 1px;}
+
+.news-container .side { grid-template-rows: 32% 32% 32%; gap: 2%; height: 100% } 
+.news-container .side .article { transition: 0.5s; height: 100%; width: 100%; border-radius: 8px;}
+.news-container .side .article:hover {   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+.news-container .side .article img { width: 40%; height: 100%; float: left; border-radius: 5px 0 0 5px; }
+.news-container .side .article .content { padding: 10px 15px; text-align: left; height: 100%; float: right; width: 60%}
+.news-container .side .article .content { display: grid; grid-row: auto auto auto; }
+.news-container .side .article .content .category {  font-size: 9pt; font-weight: 600;   }
+.news-container .side .article .content .title {   font-size: 11pt; font-weight: 100; color: var(--primary-dark); }
+
+
+
+/*============ LOJA =====================*/
+.shop-container {  width: 100%; grid-template-columns: 25% 25% 25% 25%; }
+.shop-container .card {  
+    border-bottom: 3px solid var(--accent);
+    position: relative;
+    padding: 20px; 
+    padding-bottom: 100px;
+    height: 320px; 
+    display: grid; 
+    grid-template-rows: 85% 15%;
+}
+.shop-container .card:hover {  transform: scale(1.05); }
+.shop-container .card img { width: 130px; height: 80%; margin: auto; }
+.shop-container .card .description { width: 100%; text-align: center; height: 30%;  }
+.shop-container .card .description .title { font-size: 11pt; color: var(--primary-dark);}
+.shop-container .card .description .category { font-size: 8pt; color: grey }
+.shop-container .card .description .price { font-size: 10pt; color: var(--accent); }
+.shop-container .card .description .price-old { font-size: 8pt; color: var(--primary); text-decoration: line-through }
+.shop-container .card .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 4px;
+    text-align: center;
+    height: 35px;
+    border-radius: 0 0 10px 10px;
+    background: var(--accent);
+    color: white;
+    font-size: 5pt
+  }
+
+/*============ BLOG =====================*/
+.blog-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+.blog-container .card { height: 350px; width: 280px; margin: 10px }
+.card-blog { border-radius: 8px; }
+.card-blog img { width: 100%; height: 170px; border-radius: 8px 8px 0 0;}
+.card-blog .title {  margin-top: 5px; padding: 0 5px;text-align: center; font-size: 11pt;  color: var(--accent);}
+.card-blog:hover .title { text-decoration-line: underline }
+.card-blog .description {  margin-bottom: 8px; padding: 1px 20px;  width: 100%; height: 100px;  }
+.card-blog .description p {  font-size: 11pt; text-align: justify; }
+.card-blog .card-footer { bottom: 0; font-size: 8pt; width: 100%; height: 30px; padding: 15px ; position: relative;}
+.card-blog .card-footer .avatar { width: 30px; height: 100%; border-radius: 100%; vertical-align: middle; }
+.card-blog .card-footer .author { padding-left: 35px; position: absolute; transform: translateY(-50%)  }
+.card-blog .card-footer .post-date { right: 15px; position: absolute; transform: translateY(-50%) }
+
+
+/*============ CONTACTO =====================*/
+.contact-container { grid-template-columns: 50% 50%; text-align: justify}
+.contact-container .card { padding: 24px; text-align: center}
+.contact-container i { margin-right: 10px}
+#contact-form form p { text-align: left; font-size: 9pt }
+#contact-form input, textarea {
+    width: 100%;
+    padding-left: 5px;
+    border: 2px solid var(--primary);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+
+/* Medium devices (tablets, 768px and down) */
+@media screen and (max-width: 768px) 
+{ 
+    .shop-container {
+        grid-template-columns: 50% 50%;
+        gap: 3%;
+    }
+    .news-container {
+        grid-template-columns: 100%;
+    }
+    .news-container .center-news {display: none}
+    
+    .news-container > .side {  
+        grid-template-rows: auto auto auto;
+    }
+
+}
+
+
+/* Small devices (phones, 576px and down) */
+@media screen and (max-width: 576px) 
+{ 
+    #blog-section, #news-section, #shop-section,    
+    #contact-section, #about-section {
+        padding: 24px 16px;
+        margin: 14px 0;
+    }
+
+    .news-container, .blog-container, 
+    .shop-container, .contact-container {
+        padding: 12px 24px;
+
+    }
+
+
+    .shop-container {
+        grid-template-columns: 100%;
+    }
+
+   
+    .contact-container {
+        grid-template-columns: 100%;
+        grid-gap: 3%;
+        padding: 0;
+    }
+
+    .news-container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+    }
+    .news-container > .side {  
+        grid-template-rows: auto auto auto;
+    }
+
+    #newsletter {
+        height: 350px;
+        padding: 14px 2px;
+    }
+}

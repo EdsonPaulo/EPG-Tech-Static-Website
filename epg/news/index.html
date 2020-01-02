@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>EPG Tech - Notícias</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <link rel="icon" type="image/x-icon" href="../../assets/EPG.png">
+    <!-- Import. dos estilos -->
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css"/> <!--main styles-->
+    <link rel="stylesheet" type="text/css" href="../../css/styles-news.css"/>
+</head>
+<body>
+    <header>
+        <div class="social-bar center-v">
+            <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="logo center">
+            <a href="#">EPG Tech</a>
+            <br>Tecnologia nos seus limites<br>
+        </div>
+
+        <div class="rapid-links">
+            <a href="../../epg/about.html">SOBRE</i></a>
+            <span>*</span>
+            <a href="../../epg/support.html">AJUDA</a>
+        </div>
+
+        <div id="menu-btn" onclick="openMenu()">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </header>
+
+    <nav id="navbar" class="shadow">
+        <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../epg/shop/index.html">LOJA</a></li>
+            <li><a class="active">NOTÍCIAS</a></li>
+            <li><a href="../../epg/blog/index.html">BLOG</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Pesquisar..." required>
+                <button type="submit" value="" class="btn-primar"><i class="fa fa-search"></i></button>
+            </li>
+        </ul>
+    </nav>
+
+    <nav  class="shadow" id="sidebar">
+        <div id="close-btn" onclick="closeMenu()"><i class="fa fa-close"></i></div>
+        <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../../epg/shop/index.html">LOJA</a></li>
+            <li><a class="active">NOTÍCIAS</a></li>
+            <li><a href="../../epg/blog/index.html">BLOG</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Pesquisar..." required>
+                <button type="submit" value=""><i class="fa fa-search"></i></button>
+            </li>
+            <li class="social-bar">
+                <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+    </nav>
+<main  id="main">
+
+<!-- id="particles-js" >
+
+    <div class="container" style="position: absolute; width: 100%; height: 100%; padding: 48px">
+    -->
+        <div class="carousel card">
+            <div class="slide fade"> 
+                <img src="../../assets/img/news/cam.jpg" >
+                <p class="text">Saiba qual smartphone tem a melhor câmera de 2019, segundo DxOMark</p>
+            </div>
+            <div class="slide fade"> 
+                <img src="../../assets/img/news/tech.jpg" >
+                <p class="text">Obtenha os produtos em alta no mercado ao mais baixo custo!</p>
+            </div>
+            <div class="slide fade"> <img src="../../assets/img/news/Black-Friday-2019-Deals.jpg" ></div>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- os indicadores -->
+            <div id="indicators" class="center-h">
+                <span class="indicator" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+            </div>
+        </div> 
+
+        <h3 style="margin-top: 70px"> ÚLTIMAS NOTÍCIAS </h3>
+        <div class="main-news-container">
+            <div class="left-news-container">
+                <a href="news-article.html" class="news card">
+                    <img src="../../assets/img/news/conecta - Copia.jpg">
+                    <div class="text-block">
+                        <p class="category">CONECTAPAY</p>
+                        <p class="title">Conheça ConectaPay uma carteira digital 100% angolana que promete te livrar de sufocos</p>
+                        <p class="date">30 de Novembro de 2019</P>
+                    </div>
+                </a>
+
+                <a href="news-article.html" class="news card">
+                    <img src="../../assets/img/news/microssatélites-324x160.jpg">
+                    <div class="text-block">
+                        <p class="category">ANGOLA</p>
+                        <p class="title">Dados de satélites ajudarão a monitorar seca no na provícia do Cunene</p>
+                        <p class="date">29 de Novembro de 2019</P>
+                    </div>
+                </a>
+
+                <a href="news-article.html" class="news card">
+                    <img src="../../assets/img/news/tech.jpg">
+                    <div class="text-block">
+                        <p class="category">INTERNET</p>
+                        <p class="title">Estudos realizado pela Universidade de Pretória indica aumento de 12% na interconexão em África 
+                            nos últimos 2 anos
+                        </p>
+                        <p class="date">29 de Novembro de 2019</P>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="right-news-container">
+                <a class="news" href="news-article.html">
+                    <img src="../../assets/img/news/SWLuanda.jpg">
+                    <div class="content">
+                        <p class="category">STARTUP WEEKEND LUANDA - EDIÇÃO 2</p>
+                        <p class="title">Decorrerá no ISPTEC a 2ª edição do Startup Weekend Luanda de 22 a 24</p>
+                        <p class="source">Por Redação EPG | 2019-11-28 </p>
+                    </div>
+                </a>
+                <a class="news" href="news-article.html">
+                    <img src="../../assets/img/news/bai.jpg">
+                    <div class="content">
+                        <p class="category">BAI DIRECTO</p>
+                        <p class="title">BAI Directo conta com novo serviço que permite receber dinheiro na hora</p>
+                        <p class="source">Por Redação EPG | 2019-11-27 </p>
+                    </div>
+                </a>
+                <a class="news" href="news-article.html">
+                    <img src="../../assets/img/news/ShopSemLim-1-324x235.png">
+                    <div class="content">
+                        <p class="category">SHOPSEMLIM</p>
+                        <p class="title">Descubra a nova forma de ir aos mercados em Angola sem sair de casa</p>
+                        <p class="source">Por Redação EPG | 2019-11-27 </p>
+                    </div>
+                </a>
+                <a class="news" href="news-article.html">
+                    <img src="../../assets/img/news/AZ-Cloud-Multipla-324x235.jpg">
+                    <div class="content">
+                        <p class="category">AZ CLOUD - BY MULTIPLA</p>
+                        <p class="title">Multipla - IP World anuncia acordo com a Azion</p>
+                        <p class="source">Por Redação EPG | 2019-11-28 </p>
+                    </div>
+                </a>
+                <a class="news" href="news-article.html">
+                    <img src="../../assets/img/news/min-edu.png">
+                    <div class="content">
+                        <p class="category">MINISTÉRIO DA EDUCAÇÃO</p>
+                        <p class="title">Ministério da Educação estuda a implementação do ensino a distância</p>
+                        <p class="source">Por Redação EPG | 2019-11-27 </p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    <hr>
+    <div class="ads" style="width: 100%; height: 200px; padding: 0 48px">
+        <img src="../../assets/img/news/Black-Friday-2019-Deals.jpg" style="width: 100%; height: 100%;">
+    </div>
+    <hr>
+
+    <div class="center-news-container">
+        <a class="news" href="news-article.html">
+            <img src="../../assets/img/news/AZ-Cloud-Multipla-324x235.jpg">
+            <div class="content">
+                <p class="category">AZ CLOUD - BY MULTIPLA</p>
+                <p class="title">Multipla - IP World anuncia acordo com a Azion em contrato longo</p>
+                <p class="source">Por Redação EPG | 2019-11-28 </p>
+            </div>
+        </a>
+        <a class="news" href="news-article.html">
+            <img src="../../assets/img/news/SWLuanda.jpg">
+            <div class="content">
+                <p class="category">STARTUP WEEKEND LUANDA - EDIÇÃO 2</p>
+                <p class="title">Decorrerá no ISPTEC a 2ª edição do Startup Weekend Luanda de 22 a 24</p>
+                <p class="source">Por Redação EPG | 2019-11-28 </p>
+            </div>
+        </a>
+        <a class="news" href="news-article.html">
+            <img src="../../assets/img/news/bai.jpg">
+            <div class="content">
+                <p class="category">BAI DIRECTO</p>
+                <p class="title">BAI Directo conta com novo serviço que permite receber dinheiro na hora</p>
+                <p class="source">Por Redação EPG | 2019-11-27 </p>
+            </div>
+        </a>
+        <a class="news" href="news-article.html">
+            <img src="../../assets/img/news/ShopSemLim-1-324x235.png">
+            <div class="content">
+                <p class="category">SHOPSEMLIM</p>
+                <p class="title">Descubra a nova forma de ir aos mercados em Angola sem sair de casa</p>
+                <p class="source">Por Redação EPG | 2019-11-27 </p>
+            </div>
+        </a>
+        <a class="news" href="news-article.html">
+            <img src="../../assets/img/news/bai.jpg">
+            <div class="content">
+                <p class="category">BAI DIRECTO</p>
+                <p class="title">BAI Directo conta com novo serviço que permite receber dinheiro na hora</p>
+                <p class="source">Por Redação EPG | 2019-11-27 </p>
+            </div>
+        </a>
+        <a class="news" href="news-article.html">
+            <img src="../../assets/img/news/AZ-Cloud-Multipla-324x235.jpg">
+            <div class="content">
+                <p class="category">AZ CLOUD - BY MULTIPLA</p>
+                <p class="title">Multipla - IP World anuncia acordo com a Azion em contrato longo</p>
+                <p class="source">Por Redação EPG | 2019-11-28 </p>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a class="active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">&raquo;</a>
+    </div>
+
+    
+    <!-- Botão ir para o topo -->
+    <button class="goUp card" id="goUp-btn"><i class="fa fa-arrow-up"></i></button>
+
+</main>
+ 
+    <!-- RODAPÉ  -->
+    <footer>
+        <div class="rapid-links center-h">
+            <a id="contact">CONTACTO</a>
+            <a href="epg/about.html">SOBRE NÓS</i></a>
+            <a href="epg/support.html">SUPORTE</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="social-bar">
+            <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="copyright center-h">
+            <span><i class="fa fa-copyright"></i> 2019 - EPG Tech</span> 
+            <span>Todos os Direitos Reservados</span> 
+            <span>Design by Edson Paulo</span>
+        </div>
+    </footer>   
+    <!-- Import. dos scripts -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+
+</body>
+</html>

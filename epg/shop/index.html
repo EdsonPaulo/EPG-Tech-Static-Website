@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>EPG Tech - Loja</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <link rel="icon" type="image/x-icon" href="../../assets/EPG.png">
+        <!-- Import. dos estilos -->
+        <link rel="stylesheet" type="text/css" href="../../css/styles.css"/> <!--main styles-->
+        <link rel="stylesheet" type="text/css" href="../../css/styles-shop.css"/> <!--medium devices styles-->
+    </head>
+<body>
+      
+    <header>
+        <div class="social-bar center-v">
+            <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="logo center">
+            <a href="#">EPG Tech</a>
+            <br>Tecnologia nos seus limites<br>
+        </div>
+
+        <div class="rapid-links">
+            <a onclick="openModalLogin()"><i class="fa fa-user"></i></a>
+            <span>*</span>
+            <a href="#"><i class="fa fa-heart"> 2</i></a>
+            <span>*</span>
+            <a href="#"><i class="fa fa-shopping-bag"></i></a>
+        </div>
+
+        <div id="menu-btn" onclick="openMenu()">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+    </header>
+
+    <nav class="shadow" id="navbar" >
+        <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a class="active">LOJA</a></li>
+            <li><a href="../../epg/news/index.html">NOTÍCIAS</a></li>
+            <li><a href="../../epg/blog/index.html">BLOG</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Pesquisar..." required>
+                <button type="submit" value="" class="btn-primar"><i class="fa fa-search"></i></button>
+            </li>
+        </ul>
+    </nav>
+
+    <nav  class="shadow" id="sidebar">
+        <div id="close-btn" onclick="closeMenu()"><i class="fa fa-close"></i></div>
+
+        <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a class="active">LOJA</a></li>
+            <li><a href="../../epg/news/index.html">NOTÍCIAS</a></li>
+            <li><a href="../../epg/blog/index.html">BLOG</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Pesquisar..." required>
+                <button type="submit" value=""><i class="fa fa-search"></i></button>
+            </li>
+            <li class="social-bar">
+                <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <main  id="main">
+        <div class="main-container">
+            <div class="shop-sidebar card">
+                <ul id="category-filter">
+                    <li class="search-bar">
+                        <form action="" method="get">
+                            <input type="text" placeholder="Pesquisar por produto..." required autocomplete="on">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                    <li class="btn-category active" onclick="filterSelection('all')"><i class="fa fa-table"></i>Mostrar tudo</li>
+                    <li class="btn-category" onclick="filterSelection('computers')"><i class="fa fa-laptop"></i> Computadores</li>
+                    <li class="btn-category" onclick="filterSelection('games')"><i class="fa fa-gamepad"></i> Jogos e Consolas </li>
+                    <li class="btn-category" onclick="filterSelection('smartphones')"><i class="fa fa-tablet"></i> Smartphones e Tablets </li>
+                    <li class="btn-category" onclick="filterSelection('printers')"><i class="fa fa-print"></i> Impressoras e Scanners</i></li>
+                    <li class="btn-category" onclick="filterSelection('devices')"><i class="fa fa-headphones"></i> Dispositivos e Acessórios </li>
+                </ul>
+
+                <div class="price-filter">
+                    <h4 class="">FILTRAR POR PREÇO:</h4>
+                    <form class="price-range">
+                        <input type="range" min="1000" max="100000" value="1000" step="500" id="price-min-range">
+                        <input type="range" min="100000" max="900000" value="900000" step="500" id="price-max-range">
+                    </form>
+                
+                    <div class="price-text">
+                        <span id="price-min-text"></span> - 
+                        <span id="price-max-text"></span>
+                    </div>
+
+                    <button class="btn-primary" style="margin-top: 10px">Filtrar</button>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="filter-list card">
+                    <select name="filter">
+                        <option value="latest">Mais Recentes</option>
+                        <option value="more-buy">Mais Comprados</option>
+                        <option value="name-asc">Nome, de A a Z</option>
+                        <option value="name-desc">Nome, de Z a A</option>
+                        <option value="price-asc">Preço, do mais baixo ao mais alto</option>
+                        <option value="price-desc">Preço, do mais alto ao mais baixo</option>
+                    </select>
+                    <button class="btn-primary">Filtrar</button>
+                </div>
+        
+
+                <div class="shop-container">
+            
+                    <!-- Produto -->
+                    <div class="product smartphones">
+                        <div class="product-container">
+                            <span class="badge">NEW</span>
+                            <img src="../../assets/img/products/note10.jfif">
+                            <div class="description">
+                                <p class="title" href="shop-product.html">Samsung Note 10 Plus</p>
+                                <p class="category">Smartphones e Tablets</p>
+                                <span class="price-old">450.000Kz</span>
+                                <span class="price">400.000Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Produto -->
+                    <div class="product smartphones">
+                        <div class="product-container">
+                            <img src="../../assets/img/products/nokia.jfif">
+                            <div class="description">
+                                <p class="title" href="shop-product.html">Nokia X6 64GB</p>
+                                <p class="category">Smartphones e Tablets</p>
+                                <span class="price-old">140.000Kz</span>
+                                <span class="price">136.000Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Produto -->
+                    <div class="product smartphones">
+                        <div class="product-container">
+                            <span class="badge">NEW</span>
+                            <img src="../../assets/img/products/s11.jfif" >
+                            <div class="description">
+                                <p class="title">Huawei P40</p>
+                                <p class="category">Smartphones e Tablets</p>
+                                <span class="price-old">555.000Kz</span>
+                                <span class="price">499.999Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Produto -->
+                    <div class="product computers">
+                        <div class="product-container">
+                            <img src="../../assets/img/products/pc.jfif" >
+                            <div class="description">
+                                <p class="title">Notebook Lenovo L919</p>
+                                <p class="category">Computadores</p>
+                                <span class="price-old">305.000Kz</span>
+                                <span class="price">250.000Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Produto -->
+                    <div class="product devices">
+                        <div class="product-container">
+                            <img src="../../assets/img/products/router.jfif" >
+                            <div class="description">
+                                <p class="title">Router Wifi 16 Users</p>
+                                <p class="category">Dispositivos e Acessórios</p>
+                                <span class="price-old">65.500Kz</span>
+                                <span class="price">50.000Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+                        
+                    <!-- Produto -->
+                    <div class="product devices">
+                        <div class="product-container">
+                            <span class="badge">NEW</span>
+                            <img src="../../assets/img/products/smart.jfif" >
+                            <div class="description">
+                                <p class="title">SmartWatch EPG - 2020</p>
+                                <p class="category">Dispositivos e Acessórios</p>
+                                <span class="price-old">130.000Kz</span>
+                                <span class="price">115.000Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Produto -->
+                    <div class="product devices">
+                        <div class="product-container">
+                            <img src="../../assets/img/products/pilha.jfif" >
+                            <div class="description">
+                                <p class="title">Pilha Alcaline - 4 unid.</p>
+                                <p class="category">Dispositivos e Acessórios</p>
+                                <span class="price-old">1200Kz</span>
+                                <span class="price">900Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Produto -->
+                    <div class="product printers">
+                        <div class="product-container">
+                            <img src="../../assets/img/products/tinteiro.jfif" >
+                            <div class="description">
+                                <p class="title">Tinteiros HP 652 - Tricolor</p>
+                                <p class="category">Impressoras e Scanners</p>
+                                <span class="price-old">15.000Kz</span>
+                                <span class="price">10.500Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Produto -->
+                    <div class="product games">
+                        <div class="product-container">
+                            <img src="../../assets/img/products/tv.jfif" >
+                            <div class="description">
+                                <p class="title">TV LG 64" - ULTRA 4K</p>
+                                <p class="category">Jogos e Consolas</p>
+                                <span class="price-old">195.000Kz</span>
+                                <span class="price">180.500Kz</span>
+                            </div>
+                        </div>
+                        <div class="action-btns">
+                            <a class="btn" href="shop-product.html">
+                                <i class="fa fa-eye"></i> <span class="tooltip">Ver</span>
+                            </a>
+                            <a class="btn" onclick="openModalShop()">
+                                <i class="fa fa-shopping-cart"></i> <span class="tooltip">Comprar</span>
+                            </a>
+                            <a class="btn">
+                                <i class="fa fa-heart"></i> <span class="tooltip">Desejo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <a href="#">&laquo;</a>
+                    <a class="active" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+        </div>
+
+      
+
+
+        <!-- The Modal -->
+        <div id="buy-window" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content animate card">
+                <span class="close" onclick="closeModalShop()">&times;</span>
+                <div class="product-info-home">
+                    <img src="../../assets/img/products/nokia.jfif">
+                          
+                    <div class="product-info-details">
+                        <h3 style="text-align: center">Nokia X6 - 64GB - 16Mp</h3>
+                        <p>
+                            Marca:              Nokia <br>
+                            Referência:         EPG-ST0023 <br>
+                            Disponibilidade:    Em estoque <br>
+                            Ano de Lançamento:  2019 <br>
+                        </p>
+                        <h3 style="text-align: center">136.000Kz</h3>  
+                        <hr>
+                        Quantidade: <input type="number" name="quantity" min="1" max="10" value="1">
+                        <hr>
+                        <button class="btn-primary "><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</i></button>
+                        <button class="btn-primary"><i class="fa fa-eye"></i> Mais detalhes</i></button> 
+                        <button class="btn-primary"><i class="fa fa-heart"></i> Adicionar aos Desejos</i></button>            
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- The Modal -->
+          <div id="login-window" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content animate card" >
+                <span class="close" onclick="closeModalLogin()">&times;</span>
+                <div class="login-container" style="padding: 50px">
+                    <form action="../login.html" method="GET"
+                        <p>Nome de Usuário</p>
+                        <input type="text" id="name" name="name" placeholder="Seu nome de usuário..." required style="width: 100%; padding: 10px; border: 1px solid rgba(128, 128, 128, 0.5)">
+                        <p>Senha</p>
+                        <input type="password" id="password" name="password" placeholder="Seu senha..." required style="width: 100%; padding: 10px; border: 1px solid rgba(128, 128, 128, 0.5)"><br>
+                        <button class="btn-primary" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Botão ir para o topo -->
+        <button class="goUp card" id="goUp-btn"><i class="fa fa-arrow-up"></i></button>
+    </main>
+
+
+
+     <!-- RODAPÉ -->
+     <footer>
+        <div class="rapid-links center-h">
+            <a id="contact">CONTACTO</a>
+            <a href="epg/about.html">SOBRE NÓS</i></a>
+            <a href="epg/support.html">SUPORTE</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="social-bar">
+            <a href="http://facebook.com/epg-tech" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/epg-tech" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="http://instagram.com/epg-tech" target="_blank"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="copyright center-h">
+            <span><i class="fa fa-copyright"></i> 2019 - EPG Tech</span> 
+            <span>Todos os Direitos Reservados</span> 
+            <span>Design by Edson Paulo</span>
+        </div>
+    </footer>   
+
+    <!-- Import. dos scripts -->
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script>
+
+         //**********************  abrir e fechar janela modal de compra
+        var modal = document.getElementById('buy-window');
+        function openModalShop() { modal.style.display = "block"; } // abre o modal
+        function closeModalShop()  {  modal.style.display = "none"; } // fecha o modal
+        window.onclick = (event) => {  // fechar quando clicado em alguma parte fora do modal
+            if (event.target == modal) modal.style.display = "none";
+        }
+
+         //**********************  abrir e fechar janela modal de login
+        var modal2 = document.getElementById('login-window');
+        function openModalLogin() { modal2.style.display = "block"; } // abre o modal
+        function closeModalLogin()  {  modal2.style.display = "none"; } // fecha o modal
+        window.onclick = (event) => {  // fechar quando clicado em alguma parte fora do modal
+            if (event.target == modal2) modal2.style.display = "none";
+        }
+
+        //********************  Filtro por categoria
+        filterSelection("all"); //primeira filtragem mostrar todos
+        var btnContainer = document.getElementById("category-filter");
+        var btns = btnContainer.getElementsByClassName("btn-category");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[2].className = current[2].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+        //********************  Filtro por preco
+        var slider1 = document.getElementById("price-min-range");
+        var output1= document.getElementById("price-min-text");
+        var slider2 = document.getElementById("price-max-range");
+        var output2 = document.getElementById("price-max-text");
+        output1.innerHTML = slider1.value + 'Kz'; // Display the default slider value
+        output2.innerHTML = slider2.value + 'Kz';
+                                         
+         // Update the current slider value
+        slider1.oninput = () => { output1.innerHTML = slider1.value + 'Kz'; }
+        slider2.oninput = () => { output2.innerHTML = slider2.value + 'Kz'; }
+
+      
+
+        //******************** SLIDE MANUAL
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) { showSlides(slideIndex += n); }  // Next/previous controls
+        function currentSlide(n) { showSlides(slideIndex = n); } // Thumbnail image controls
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+            for (i = 0; i < slides.length; i++)
+                slides[i].style.display = "none";
+            slides[slideIndex-1].style.display = "block";
+        } 
+    </script>
+</body>
+</html>
+    
